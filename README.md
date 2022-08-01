@@ -28,4 +28,4 @@ Click for video:
 
 NFT Bridge Web3 Flowchart
 
-<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/NFT-Bridge-Logical-web3-Flowchart.png" width="800" height="600"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/NFT-Bridge-Logical-web3-Flowchart.png" width="900" height="600"/>
