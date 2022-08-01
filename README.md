@@ -1,10 +1,15 @@
 <a href="http://youtube.a3b.io" target="_blank"><img src="https://github.com/net2devcrypto/N2D-NFT-Marketplace/blob/main/n2DMarket.png" width="260" height="50"><h2>NFT Bridge with NextJS and EthersJS</h2></a>
 ##
-🚀👩‍🚀This repo contains all the files to follow along and implement a NFT Bridge, including smart contracts and Web3 FrontEnd! Be sure to watch my Youtube tutorials so you can learn and follow along!
+🚀👩‍🚀This repo contains all the files to follow along and implement a NFT Bridge, including smart contracts and Web3 FrontEnd! 
+
+Be sure to watch my Youtube tutorials so you can learn and follow along!
 
 <h4>NFT Bridge Web3 NextJS + NextUI Front-End</h4>
 <div class="row">
 <img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-01.PNG" width="275" height="300"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-2.PNG" width="275" height="300"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-3.PNG" width="275" height="300"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-4.PNG" width="275" height="300"/>
 </div>
 
 ** THE FILES ATTACHED TO THIS REPO ARE FOR EDUCATIONAL PURPOSES ONLY **
