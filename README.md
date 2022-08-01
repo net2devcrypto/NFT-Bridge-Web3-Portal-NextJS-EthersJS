@@ -4,7 +4,7 @@
 
 <h4>NFT Bridge Web3 NextJS + NextUI Front-End</h4>
 <div class="row">
-<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-01.PNG" width="200" height="200"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/bridge-01.PNG" width="400" height="400"/>
 </div>
 
 ** THE FILES ATTACHED TO THIS REPO ARE FOR EDUCATIONAL PURPOSES ONLY **
@@ -22,5 +22,4 @@ Click for video:
 <a href="https://www.youtube.com/watch?v=YnsRnuKB6Gg&t=825s" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
 
 NFT Bridge Web3 Flowchart
-https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/NFT-Bridge-Logical-web3-Flowchart.png
-<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/NFT-Bridge-Logical-web3-Flowchart.png" width="600" height="500"/>
+<img src="https://github.com/net2devcrypto/NFT-Bridge-Web3-Portal-NextJS-EthersJS/blob/main/pics/NFT-Bridge-Logical-web3-Flowchart.png" width="800" height="600"/>
