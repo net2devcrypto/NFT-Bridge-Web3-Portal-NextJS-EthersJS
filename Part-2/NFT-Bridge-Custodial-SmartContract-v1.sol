@@ -61,6 +61,13 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
     nft.transferFrom(msg.sender, address(this), tokenId);
     emit NFTCustody(tokenId, msg.sender);
   }
+  
+  function retainNew(uint256 tokenId) public nonReentrant onlyOwner() {
+      require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
+      holdCustody[tokenId] =  Custody(tokenId, msg.sender);
+      nft.transferFrom(msg.sender, address(this), tokenId);
+      emit NFTCustody(tokenId, msg.sender);
+  }
 
  function updateOwner(uint256 tokenId, address newHolder) public nonReentrant onlyOwner() {
    holdCustody[tokenId] =  Custody(tokenId, newHolder);
