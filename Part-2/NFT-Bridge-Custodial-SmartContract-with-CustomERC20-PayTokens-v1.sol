@@ -36,7 +36,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
 
-  uint256 public costCustom = 0.000050 ether;
+  uint256 public costCustom = 1 ether;
   uint256 public costNative = 0.000075 ether;
 
   struct Custody {
@@ -61,25 +61,23 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
   }
 
   function retainNFTC(uint256 tokenId) public payable nonReentrant {
-    require(msg.value == costCustom, "Not enough balance to complete transaction.");
-    require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
-    require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
-    require(paytoken.transferFrom(msg.sender, address(this), costCustom));
-    holdCustody[tokenId] =  Custody(tokenId, msg.sender);
-    nft.transferFrom(msg.sender, address(this), tokenId);
-    emit NFTCustody(tokenId, msg.sender);
+      require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
+      require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
+      paytoken.transferFrom(msg.sender, address(this), costCustom);
+      holdCustody[tokenId] =  Custody(tokenId, msg.sender);
+      nft.transferFrom(msg.sender, address(this), tokenId);
+      emit NFTCustody(tokenId, msg.sender);
   }
 
   function retainNFTN(uint256 tokenId) public payable nonReentrant {
-    require(msg.value == costNative, "Not enough balance to complete transaction.");
-    require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
-    require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
-    payable(address(this)).transfer(costNative);
-    holdCustody[tokenId] =  Custody(tokenId, msg.sender);
-    nft.transferFrom(msg.sender, address(this), tokenId);
-    emit NFTCustody(tokenId, msg.sender);
+      require(msg.value == costNative, "Not enough balance to complete transaction.");
+      require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
+      require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
+      holdCustody[tokenId] =  Custody(tokenId, msg.sender);
+      nft.transferFrom(msg.sender, address(this), tokenId);
+      emit NFTCustody(tokenId, msg.sender);
   }
-  
+
   function retainNew(uint256 tokenId) public nonReentrant onlyOwner() {
       require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
       holdCustody[tokenId] =  Custody(tokenId, msg.sender);
@@ -94,6 +92,10 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
  
  function releaseNFT(uint256 tokenId, address wallet) public nonReentrant onlyOwner() {
       nft.transferFrom(address(this), wallet, tokenId);
+      delete holdCustody[tokenId];
+ }
+
+  function emergencyDelete(uint256 tokenId) public nonReentrant onlyOwner() {
       delete holdCustody[tokenId];
  }
 
