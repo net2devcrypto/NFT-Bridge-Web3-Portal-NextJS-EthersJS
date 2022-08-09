@@ -51,17 +51,15 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
     nft = _nft;
   }
 
-
   function retainNFTN(uint256 tokenId) public payable nonReentrant {
-    require(msg.value == costNative, "Not enough balance to complete transaction.");
-    require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
-    require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
-    payable(address(this)).transfer(costNative);
-    holdCustody[tokenId] =  Custody(tokenId, msg.sender);
-    nft.transferFrom(msg.sender, address(this), tokenId);
-    emit NFTCustody(tokenId, msg.sender);
+      require(msg.value == costNative, "Not enough balance to complete transaction.");
+      require(nft.ownerOf(tokenId) == msg.sender, "NFT not yours");
+      require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
+      holdCustody[tokenId] =  Custody(tokenId, msg.sender);
+      nft.transferFrom(msg.sender, address(this), tokenId);
+      emit NFTCustody(tokenId, msg.sender);
   }
-  
+
   function retainNew(uint256 tokenId) public nonReentrant onlyOwner() {
       require(holdCustody[tokenId].tokenId == 0, "NFT already stored");
       holdCustody[tokenId] =  Custody(tokenId, msg.sender);
@@ -79,6 +77,10 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
       delete holdCustody[tokenId];
  }
 
+  function emergencyDelete(uint256 tokenId) public nonReentrant onlyOwner() {
+      delete holdCustody[tokenId];
+ }
+
   function onERC721Received(
         address,
         address from,
@@ -88,7 +90,7 @@ contract bridgeCustody is IERC721Receiver, ReentrancyGuard, Ownable {
       require(from == address(0x0), "Cannot Receive NFTs Directly");
       return IERC721Receiver.onERC721Received.selector;
     }
-
+  
   function withdrawNative() public payable onlyOwner() {
     require(payable(msg.sender).send(address(this).balance));
     }
