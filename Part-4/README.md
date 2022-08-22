@@ -55,6 +55,7 @@ npm i axios
   npm run dev
 
 ```
+<h5> View the App in: http://localhost:3000/ </h5>
 
 <h5> Proceed to Part-5 Video to deploy your smart contracts and test the bridge!! </h5>
 
