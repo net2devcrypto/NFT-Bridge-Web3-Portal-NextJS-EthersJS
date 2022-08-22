@@ -44,9 +44,17 @@ npm i axios
 
 <h5> Replace _app.js and index.js </h5>
 
-<h5> Replace "styles" folder with the one attached on this repo. </h5>
+<h5> Replace "styles" and "public" folders with the ones attached on this repo. </h5>
 
 <h5> Add "engine" folder to your project. </h5>
 
+<h4> Step 3 - Run your NextJS server! </h4>
 
+```shell
+
+  npm run dev
+
+```
+
+<h5> Proceed to Part-5 Video to deploy your smart contracts and test the bridge!! </h5>
 
