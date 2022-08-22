@@ -12,7 +12,7 @@ Be sure to watch my Youtube tutorials so you can learn and follow along!
 
 Click for video:
 
-<a href="https://www.youtube.com/watch?v=YnsRnuKB6Gg&t=825s" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
+<a href="" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
 
 NFT Bridge Web3 Flowchart
 
