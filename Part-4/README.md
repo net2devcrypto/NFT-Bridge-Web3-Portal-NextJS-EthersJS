@@ -8,7 +8,7 @@ Be sure to watch my Youtube tutorials so you can learn and follow along!
 
 ** USE IT AT YOUR OWN RISK** **I'M NOT RESPONSIBLE FOR ANY USE, ISSUES ETC.. **
 
-## Part-1 NFT Bridge Logical Design
+## Part-4 NFT Bridge Web3 Front End
 
 Click for video:
 
