@@ -12,7 +12,7 @@ Be sure to watch my Youtube tutorials so you can learn and follow along!
 
 Click for video:
 
-<a href="" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
+<a href="https://youtu.be/IhHPG8BET5w" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
 
 <h4> Step 1 - Deploy a new NextJS server and install dependencies. </h4>
 
