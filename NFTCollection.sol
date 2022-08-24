@@ -28,9 +28,7 @@ contract Collection is ERC721Enumerable, Ownable {
     using Strings for uint256;
     string public baseURI;
     string public baseExtension = ".json";
-
-    uint256 public cost = 0.001 ether;
-
+    
     // 1 SLOT
     uint32 public maxSupply = 100000; // supports for 2 ^ 32
     uint32 public maxMintAmount = 5; // supports for 2 ^ 32
@@ -50,9 +48,6 @@ contract Collection is ERC721Enumerable, Ownable {
         require(_mintAmount > 0 && _mintAmount <= maxMintAmount, "invalid mint amount");
         require(supply + _mintAmount <= maxSupply, "amount exceeds max supply");
         
-        if (msg.sender != owner()) {
-            require(msg.value == cost * _mintAmount, "Need to send 0.08 ether!");
-        }
         
         for (uint256 i = 1; i <= _mintAmount; i++) {
             _safeMint(_to, supply + i);
