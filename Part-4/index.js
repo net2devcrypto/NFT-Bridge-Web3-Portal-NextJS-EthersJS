@@ -206,7 +206,7 @@ export default function Home() {
           <Row>
             <Col>
             <Text h4>Bridge Source</Text>
-             <img src="bsc.png" width={"210px"} />;
+             <img src="bsc.png" width={"210px"} />
              </Col>
             <Col css={{marginTop:'$12', paddingLeft:'$12'}}>
             <div style={{marginTop:'5px'}} id="arrowAnim">
