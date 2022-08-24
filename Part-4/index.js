@@ -174,9 +174,59 @@ export default function Home() {
         </div>
       );
     } else if (sourceRpc == mumrpc) {
-      return <img src="polygonwhite.png" width={"210px"} />;
+      return (
+        <div>
+          <Row>
+            <Col>
+            <Text h4>Bridge Source</Text>
+             <img src="polygonwhite.png" width={"210px"} />
+             </Col>
+            <Col css={{marginTop:'$12', paddingLeft:'$12'}}>
+            <div style={{marginTop:'5px'}} id="arrowAnim">
+              <div className="arrowSliding">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay1">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay2">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay3">
+                <div className="arrow"></div>
+              </div>
+            </div>
+            </Col>
+          </Row>
+        </div>
+      );
     } else if (sourceRpc == bsctrpc) {
-      return <img src="bsc.png" width={"210px"} />;
+      return (
+        <div>
+          <Row>
+            <Col>
+            <Text h4>Bridge Source</Text>
+             <img src="bsc.png" width={"210px"} />;
+             </Col>
+            <Col css={{marginTop:'$12', paddingLeft:'$12'}}>
+            <div style={{marginTop:'5px'}} id="arrowAnim">
+              <div className="arrowSliding">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay1">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay2">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay3">
+                <div className="arrow"></div>
+              </div>
+            </div>
+            </Col>
+          </Row>
+        </div>
+      );
     }
   });
 
