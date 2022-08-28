@@ -20,7 +20,11 @@ const cipherKey = "#ffg3$dvcv4rtkljjkh38dfkhhjgt"
 const ethraw = "";
 export const simpleCrypto = new SimpleCrypto(cipherKey)
 export const cipherEth = simpleCrypto.encrypt(ethraw)
-export var bridgeWallet = '';
+/*
+Add the wallet address used to deploy the contracts below:
+*/
+export var bridgeWallet = "CONTRACTOWNERWALLETADDRESS";
+
 /*
 Global Configurations
 */
