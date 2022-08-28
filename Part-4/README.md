@@ -59,3 +59,6 @@ npm i axios
 
 <h5> Proceed to Part-5 Video to deploy your smart contracts and test the bridge!! </h5>
 
+Click for video:
+
+<a href="https://youtu.be/lEuG9icCGr8" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
