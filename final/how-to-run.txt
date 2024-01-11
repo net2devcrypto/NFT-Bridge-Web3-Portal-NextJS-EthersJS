@@ -1,0 +1,13 @@
+
+Open your CMD or Shell console and navigate to folder then install:
+
+cd final
+npm i
+
+
+After completing the install you may run this:
+
+npm run dev
+
+
+Open in a browser : http://localhost:3000/defiswap
